@@ -9,7 +9,7 @@ pipeline {
   }
   post {
     always {
-      ehco 'stuff'
+      echo 'stuff'
     }
   }
 }
