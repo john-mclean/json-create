@@ -3,8 +3,13 @@ pipeline {
   stages {
     stage('FirstStage') {
       steps {
-        echo 'no'
+        echo 'not today'
       }
+    }
+  }
+  post {
+    always {
+      ehco 'stuff'
     }
   }
 }
