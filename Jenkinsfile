@@ -4,8 +4,10 @@ pipeline {
     stage('FirstStage') {
       steps {
         sh '''echo -e "{\\"build_number\\":"${BUILD_NUMBER}" }"
-echo -e "{\\"commit_hash\\":\\""$GIT_COMMIT"\\" }"
-echo -e "{\\"build_date\\":"$(date +s%)" }"
+'''
+        sh '''echo -e "{\\"commit_hash\\":\\""$GIT_COMMIT"\\" }"
+'''
+        sh '''echo -e "{\\"build_date\\":"$(date +s%)" }"
 '''
       }
     }
